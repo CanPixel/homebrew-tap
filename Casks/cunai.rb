@@ -17,7 +17,7 @@ cask "cunai" do
   homepage "https://cunai.app/"
 
   depends_on arch: :arm64
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "CunAI.app"
 
@@ -32,7 +32,5 @@ cask "cunai" do
     CunAI is not notarized with Apple. If macOS reports the app as damaged,
     remove the quarantine attribute and launch again:
       xattr -cr /Applications/CunAI.app
-    Installing with `brew install --cask --no-quarantine cunai` avoids the
-    prompt entirely.
   EOS
 end
