@@ -5,10 +5,8 @@
 cask "cunai" do
   version "1.0.3"
 
-  on_intel do
-    sha256 "TODO_INTEL_SHA256"
-    url "https://artifacts.cunai.app/releases/v#{version}/CunAI_#{version}_x64.dmg"
-  end
+  # CI only builds an Apple Silicon dmg (the macOS job builds the runner's
+  # native arch); reintroduce an on_intel block if x64 builds ever ship.
   on_arm do
     sha256 "c2512c74ec67a4693b09e083d52090fa30ddb1682397e30159ab9036921dfe9f"
     url "https://artifacts.cunai.app/releases/v#{version}/CunAI_#{version}_aarch64.dmg"
@@ -18,6 +16,7 @@ cask "cunai" do
   desc "Offline-first Sumerian dictionary with local semantic search"
   homepage "https://cunai.app/"
 
+  depends_on arch: :arm64
   depends_on macos: ">= :big_sur"
 
   app "CunAI.app"
