@@ -3,12 +3,12 @@
 # publish-homebrew.py stamps version/hashes and pushes it there on release.
 # Install: brew install --cask CanPixel/tap/cunai
 cask "cunai" do
-  version "1.0.3"
+  version "1.0.4"
 
   # CI only builds an Apple Silicon dmg (the macOS job builds the runner's
   # native arch); reintroduce an on_intel block if x64 builds ever ship.
   on_arm do
-    sha256 "c2512c74ec67a4693b09e083d52090fa30ddb1682397e30159ab9036921dfe9f"
+    sha256 "001c1d899dd79f7612554bb87b4fe34a2f5753f8a4b4b803953e945d6ff88af7"
     url "https://artifacts.cunai.app/releases/v#{version}/CunAI_#{version}_aarch64.dmg"
   end
 
