@@ -9,12 +9,12 @@ cask "cunai" do
   # cross-compiles the Intel dmg. publish-homebrew.py stamps both hashes from
   # SHA256SUMS.txt, matching on the _aarch64.dmg / _x64.dmg suffixes.
   on_arm do
-    sha256 "a8fe1d2204d6e4658b225d2a93e388af899020fc9257e702f222ff2cf88cd7b6"
+    sha256 "336a84b130864ecd68b3ed752561eb2dde860b27721dd00b0eed9bca10576484"
 
     url "https://artifacts.cunai.app/releases/v#{version}/CunAI_#{version}_aarch64.dmg"
   end
   on_intel do
-    sha256 "b2c6c26e3011ac06218eb083a4eb704242805cbf6309cb5bcd576b4b63a20ec9"
+    sha256 "e41ffcd485c1b102c9bf663a38dbd642ec25b99a7e991ba70fda0267be5ffda9"
 
     url "https://artifacts.cunai.app/releases/v#{version}/CunAI_#{version}_x64.dmg"
   end
