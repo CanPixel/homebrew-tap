@@ -28,7 +28,7 @@ cask "cunai" do
   # tell an installed user that a new CunAI exists.
   livecheck do
     url "https://artifacts.cunai.app/latest/latest-release.json"
-    regex(/"version "1.0.8"v?(\d+(?:\.\d+)+)"/i)
+    regex(/"version":\s*"v?(\d+(?:\.\d+)+)"/i)
   end
 
   depends_on macos: :big_sur
